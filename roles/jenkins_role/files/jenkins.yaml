@@ -17,9 +17,17 @@ credentials:
           scope: GLOBAL
           username: "admin"
 jenkins:
+  systemMessage: "Hello, this Jenkins instance installed and configured by DevOps Intern Danylo Zakharchenko. It's already preinstalled credentials, maven, plugins, "
   agentProtocols:
   - "JNLP4-connect"
   - "Ping"
+  securityRealm:
+  local:
+    allowsSignup: true
+    users:
+     - id: jenkins_admin
+     - password: adminpass
+
   authorizationStrategy:
     projectMatrix:
       permissions:
@@ -131,7 +139,7 @@ unclassified:
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
   gitHubPluginConfig:
-    hookUrl: "http://localhost:8080/github-webhook/"
+    hookUrl: "http://{{ jenkins_url }}/github-webhook/"
   gitSCM:
     createAccountBasedOnEmail: false
     globalConfigName: "Danylo Zakharchenko"
@@ -145,10 +153,10 @@ unclassified:
         displayName: "Nexus_test"
         id: "nexus"
         internalId: "480a7e92-41d6-4865-936f-3ff204bc5153"
-        serverUrl: "http://172.17.0.2:8081"
+        serverUrl: "http://{{ nexus_url }}:8081"
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "http://localhost:8080/"
+    url: "http://{{ jenkins_url }}:8080/"
   mailer:
     authentication:
       password: "{AQAAABAAAAAQu1a3RKK+OunI6eefM16kxTP6JZouGGfcQiIK6SxFO5I=}"
