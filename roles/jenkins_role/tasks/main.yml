@@ -1,0 +1,59 @@
+---
+  - name: Check Hostname
+    command: hostname
+    register: hname
+
+  - debug: msg="{{ hname.stdout }}"
+
+#install packages
+  - name: APT Update
+    apt: update_cache=yes
+
+  - name: Install Java jdk
+    apt:
+      pkg:
+      - openjdk-8-jdk
+      - openjdk-8-jre
+      - python-pip
+
+  - name: Upgrade boto
+    shell: pip install boto==2.9 --upgrade
+
+#install Jenkins
+  - name: Add jenkins keys and list
+    shell: |
+     wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+     sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9B7D32F2D50582E6
+  - name: Update system
+    apt: update_cache=yes
+
+  - name: Install Jenkins
+    apt:
+      name: jenkins=2.222.3
+
+  - name: Start & Enable Jenkins
+    systemd:
+      name: jenkins
+      state: started
+      enabled: true
+
+  - name: Allow OpenSSH
+    ufw:
+      rule: allow
+      name: OpenSSH
+
+  - name: Allow all access to tcp port 8080
+    ufw:
+      rule: allow
+      port: '8080'
+      proto: tcp
+
+  - name: Enable UFW
+    ufw:
+      state: enabled
+      #command: usermod -aG docker jenkins
+
+
+
+...

@@ -1,0 +1,192 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          description: "Logon to Nexus3 OSS"
+          id: "nexus-cred"
+          password: "{AQAAABAAAAAQ4Yt//1eZlZqq6xwtkJG/Abmu4HNWowYjKRdc0Rkqx3Y=}"
+          scope: GLOBAL
+          username: "admin"
+      - basicSSHUserPrivateKey:
+          description: "private key for GitHub"
+          id: "GH_private_key"
+          privateKeySource:
+            directEntry:
+              privateKey: "{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}"
+          scope: GLOBAL
+          username: "admin"
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    projectMatrix:
+      permissions:
+      - "Overall/Administer:admin"
+      - "Overall/Administer:user1"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "jenkins.security.QueueItemAuthenticatorMonitor"
+  labelAtoms:
+  - name: "Slave"
+  - name: "Slave_node"
+  - name: "master"
+  labelString: "master"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  nodes:
+  - permanent:
+      labelString: "Slave"
+      launcher:
+        jnlp:
+          workDirSettings:
+            disabled: false
+            failIfWorkDirIsMissing: false
+            internalDir: "remoting"
+      mode: EXCLUSIVE
+      name: "Slave_node"
+      numExecutors: 2
+      remoteFS: "/var/jenkins_home/slave_node"
+      retentionStrategy: "always"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: true
+      enableCaptcha: false
+      users:
+      - id: "admin"
+        name: "Administrator"
+        properties:
+        - "apiToken"
+        - colorBlindProperty:
+            enabledColorBlindSupport: false
+        - mailer:
+            emailAddress: "dzakharchenko@griddynamics.com"
+        - preferredProvider:
+            providerId: "default"
+      - id: "user1"
+        name: "User_as_admin"
+        properties:
+        - "apiToken"
+        - "myView"
+        - preferredProvider:
+            providerId: "default"
+        - "timezone"
+        - mailer:
+            emailAddress: "support@google.com"
+        - "slack"
+  slaveAgentPort: 50000
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  buildStepOperation:
+    enabled: false
+  defaultFolderConfiguration:
+    healthMetrics:
+    - worstChildHealthMetric:
+        recursive: true
+  extendedEmailPublisher:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:\r\n\r\nCheck\
+      \ console output at $BUILD_URL to view the results."
+    defaultContentType: "text/plain"
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: 0
+    precedenceBulk: false
+    useSsl: false
+    watchingEnabled: false
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://localhost:8080/github-webhook/"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    globalConfigName: "Danylo Zakharchenko"
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  globalNexusConfiguration:
+    instanceId: "e32fe7dbb5db40e8a4661e258f8ee726"
+    nxrmConfigs:
+    - nxrm3Configuration:
+        credentialsId: "nexus-cred"
+        displayName: "Nexus_test"
+        id: "nexus"
+        internalId: "480a7e92-41d6-4865-936f-3ff204bc5153"
+        serverUrl: "http://172.17.0.2:8081"
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://localhost:8080/"
+  mailer:
+    authentication:
+      password: "{AQAAABAAAAAQu1a3RKK+OunI6eefM16kxTP6JZouGGfcQiIK6SxFO5I=}"
+      username: "daniel.zaharchenk00@gmail.com"
+    charset: "UTF-8"
+    replyToAddress: "daniel.zaharchenk00@gmail.com"
+    smtpHost: "smtp.gmail.com"
+    smtpPort: "465"
+    useSsl: true
+    useTls: false
+  mavenModuleSet:
+    localRepository: "default"
+  pollSCM:
+    pollingThreadCount: 10
+  shell:
+    shell: "/bin/bash"
+  slackNotifier:
+    botUser: false
+    sendAsText: false
+  telegramBotGlobalConfiguration:
+    approvalType: ALL
+    botName: "Butler"
+    botToken: "1395533954:AAGl9Z8dWIQnrEfrgLGUUdhCTV07UOX5jns"
+    shouldLogToConsole: false
+  timestamperConfig:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  maven:
+    installations:
+    - name: "Maven"
+      properties:
+      - installSource:
+          installers:
+          - maven:
+              id: "3.6.3"

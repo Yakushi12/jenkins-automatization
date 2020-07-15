@@ -1,0 +1,9 @@
+[Jenkins]
+Jenkins ansible_host=
+
+[Nexus]
+Nexus3 ansible_host=
+
+[All:children]
+Jenkins
+Nexus

@@ -1,0 +1,15 @@
+---
+
+- hosts: Nexus
+  become: true
+  gather_facts: no
+  roles:
+    - { role: nexus_role}
+
+- hosts: Jenkins
+  become: true
+  gather_facts: no
+  roles:
+    - { role: jenkins_role}
+
+...
