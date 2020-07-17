@@ -1,3 +1,5 @@
+#!groovy
+
 import jenkins.model.*
 import org.jenkinsci.plugins.*
 import hudson.security.csrf.DefaultCrumbIssuer

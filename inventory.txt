@@ -1,5 +1,5 @@
 [Jenkins]
-Jenkins ansible_host=
+Jenkins2 ansible_host=35.246.253.248
 
 [Nexus]
 Nexus3 ansible_host=

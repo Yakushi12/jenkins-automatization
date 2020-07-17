@@ -1,12 +1,14 @@
+#!groovy
+
 import jenkins.model.*
 import hudson.security.*
 
 def instance = Jenkins.getInstance()
 
 def hudsonRealm = new HudsonPrivateSecurityRealm(false)
-hudsonRealm.createAccount("admin_02","admin02pass")
+hudsonRealm.createAccount("admin2","admin2pass")
 instance.setSecurityRealm(hudsonRealm)
 instance.save()
 def strategy = new GlobalMatrixAuthorizationStrategy()
-strategy.add(Jenkins.ADMINISTER, "admin_02")
+strategy.add(Jenkins.ADMINISTER, "admin2")
 instance.setAuthorizationStrategy(strategy)

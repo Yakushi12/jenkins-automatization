@@ -1,6 +1,10 @@
+#!groovy
+
 public_key = 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxbDF8h5VAYt6keTV7lo/aP/O+UZ8gkH8FLi1tsyT+9up8WUsDrbuVm5HoQBbDQ9dH2JO3EHYmKj0bfoUUAETreI0nMmeNfB4XZXCMlcUbutiaMI9EVf7UfA4T07MLqQDCSN/NxCZh6GZmevziQzvWmgkjqZE5ID7nRyG3iNmwAcsCuHZU4wovQx4B6xjE/WnRE1mozvIDSartNlmQ9/WLno5txaMx8+NmwmVBJhQ3DdvhyPtN9unhDoQGHGuJSNG8StBBMp6WLpFpsTIQUM8fswkp712wIQ8ddqVWrYU+T1B9q04ixy20iWVlwDI28qTsd9xJtQ9No1BX7ihkCYpKYgrog4aW81UBr/N1kIaHuFTdRLM5iSE/x28ZfhF4kwwaYSODYNxcwPDDo8+Fk0d1it4+44nni2bq0a5uLJuHGKkUwnebUjgRTUUZUx0hJr8/1XvVA4bSeI016APSe8YUbKmiHSV0BKlmA7dv4iVprN5jmH40EV/SUd0uVQUk/I0= dzakharchenko@C6033'
-user = hudson.model.User.get('service')
-user.setFullName('Service User03')
+user = hudson.model.User.get('admin04')
+user.setFullName('Administrator 04')
 keys = new org.jenkinsci.main.modules.cli.auth.ssh.UserPropertyImpl(public_key)
 user.addProperty(keys)
+pass = new hudson.security.HudsonPrivateSecurityRealm_-Details("#jbcrypt:$2a$10$G/n.RNqpJ7cPRlg0Ngi97ugCLBEIAOvfd5oa0S6eRp0b1LgIgU0oe")
+user.addProperty(pass)
 user.save()

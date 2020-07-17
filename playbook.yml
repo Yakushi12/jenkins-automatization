@@ -4,12 +4,12 @@
   become: true
   gather_facts: no
   roles:
-    - { role: nexus_role}
+    - { role: nexus_role }
 
 - hosts: Jenkins
   become: true
   gather_facts: no
   roles:
-    - { role: jenkins_role}
+    - { role: jenkins_role, tags: jenkins }
 
 ...

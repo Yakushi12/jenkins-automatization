@@ -1,3 +1,5 @@
+#!groovy
+
 /*
     Install required plugins and their dependencies.
 */
@@ -7,7 +9,7 @@ import org.jenkinsci.plugins.*
 import hudson.model.UpdateSite
 import hudson.PluginWrapper
 
-Set<String> plugins_to_install = ./jenkins-plugins.txt
+Set<String> plugins_to_install = new File("/var/lib/jenkins/init.groovy.d/jenkins-plugins.txt").readLines()
 
 Boolean hasConfigBeenUpdated = false
 UpdateSite updateSite = Jenkins.getInstance().getUpdateCenter().getById('default')
