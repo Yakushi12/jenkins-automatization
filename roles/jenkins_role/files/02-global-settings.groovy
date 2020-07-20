@@ -3,7 +3,7 @@
 import jenkins.model.*
 import org.jenkinsci.plugins.*
 import hudson.security.csrf.DefaultCrumbIssuer
-import hudson.plugins.locale.PluginImpl
+import hudson.plugins.locale.*
 
 def instance = Jenkins.getInstance()
 

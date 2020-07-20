@@ -4,7 +4,6 @@ import jenkins.model.*
 import hudson.util.*;
 import jenkins.install.*;
 
-def instance = Jenkins.getInstance()
+Jenkins jenkins = Jenkins.getInstance()
 
-instance.setInstallState(InstallState.INITIAL_SETUP_COMPLETED)
-
+jenkins.setInstallState(InstallState.INITIAL_SETUP_COMPLETED)

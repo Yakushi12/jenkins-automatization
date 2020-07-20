@@ -18,10 +18,10 @@ List<PluginWrapper> plugins = Jenkins.instance.pluginManager.getPlugins()
 def install_plugin(shortName, UpdateSite updateSite) {
     println "Installing ${shortName} plugin."
     UpdateSite.Plugin plugin = updateSite.getPlugin(shortName)
-    Throwable error = plugin.deploy(false).get().getError()
-    if(error != null) {
-        println "ERROR installing ${shortName}, ${error}"
-    }
+    // Throwable error = plugin.deploy(false).get().getError()
+    // if(error != null) {
+    //     println "ERROR installing ${shortName}, ${error}"
+    // }
     null
 }
 

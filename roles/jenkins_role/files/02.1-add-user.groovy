@@ -6,7 +6,7 @@ import com.cloudbees.plugins.credentials.*
 import com.cloudbees.plugins.credentials.common.*
 import com.cloudbees.plugins.credentials.domains.*
 import com.cloudbees.jenkins.plugins.sshcredentials.impl.*
-import hudson.plugins.sshslaves.*;
+import hudson.plugins.sshslaves.*
 import hudson.model.*
 import jenkins.model.*
 import hudson.security.*
@@ -17,7 +17,7 @@ credentials_store =
     'com.cloudbees.plugins.credentials.SystemCredentialsProvider'
   )[0].getStore()
 
-credentials = new BasicSSHUserPrivateKey(CredentialsScope.GLOBAL,null,"root",new BasicSSHUserPrivateKey.UsersPrivateKeySource(),"","")
+credentials = new com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey(CredentialsScope.GLOBAL,null,"root",new com.cloudbees.jenkins.plugins.sshcredentials.impl.BasicSSHUserPrivateKey.UsersPrivateKeySource(),"","")
 
 credentials_store.addCredentials(global_domain, credentials)
 
@@ -31,7 +31,7 @@ def instance = Jenkins.getInstance()
 instance.setSecurityRealm(hudsonRealm)
 instance.save()
 
-def strategy = new GlobalMatrixAuthorizationStrategy()
+def strategy = new hudson.security.GlobalMatrixAuthorizationStrategy()
 
 //  Setting Anonymous Permissions
 strategy.add(hudson.model.Hudson.READ,'anonymous')
@@ -41,7 +41,7 @@ strategy.add(hudson.model.Item.DISCOVER,'anonymous')
 strategy.add(hudson.model.Item.READ,'anonymous')
 
 // Setting Admin Permissions
-strategy.add(Jenkins.ADMINISTER, "admin")
+strategy.add(Jenkins.ADMINISTER, "admin3")
 
 // Setting easy settings for local builds
 def local = System.getenv("BUILD").toString()

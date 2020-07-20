@@ -41,10 +41,10 @@
       dest: "{{ jenkins_home }}/init.groovy.d/"
       mode: 0755
 
-  - name: return motd to registered var
-    shell: |
-      "sed -i 's/JENKINS_JAVA_OPTIONS="/JENKINS_JAVA_OPTIONS="-Djenkins.install.runSetupWizard=false /' /etc/sysconfig/jenkins"
-      "source /etc/sysconfig/jenkins"
+  # - name: edit jenkins sysconfig
+  #   shell: |
+  #     sed -i 's/JENKINS_JAVA_OPTIONS="/JENKINS_JAVA_OPTIONS="-Djenkins.install.runSetupWizard=false /' /etc/sysconfig/jenkins
+  #     source /etc/sysconfig/jenkins
 
   # - name: Allow OpenSSH
   #   firewalld:
